@@ -14,8 +14,8 @@ mistral_api_key = os.getenv("MISTRAL_API_KEY")
 bot_key= int(os.getenv("ANTON_PASSWORD"))
 mistral_api_url = "https://api.mistral.ai/v1/chat/completions"
 
-st.title("ANTON")
-st.caption("An all knowing bot")
+st.title("ANTON 🤖")
+st.caption("An all knowing bot 📖")
 
 headers = {
     "Content-Type": "application/json",
@@ -71,8 +71,7 @@ if mistral_api_key:
         st.session_state.messages.append({"role": "assistant", "content": response})
         with st.chat_message("assistant"):
             st.markdown(response)
-    else:
-        st.error("Unauthorized access")
+
 else:
     st.error("Mistral API key not found. Please set the MISTRAL_API_KEY environment variable.")
 # Add a footer
