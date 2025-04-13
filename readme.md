@@ -16,6 +16,7 @@ anton/
 |------- |----- .env
 |--------|----- main.py
 |--------|----- readme.md
+|--------|----- .gitignore
 ```
 the .env file looks like
 ```.env

@@ -1,4 +1,5 @@
 # making a ai agent that can retreve information from a database using mistral ai api key a personalized chatbot
+# this is anton a chatbot that can answer any question
 
 
 import streamlit as st
@@ -45,7 +46,8 @@ if mistral_api_key:
             return False
     # side bar
     st.sidebar.title("Admin Login")
-    admin_id = st.sidebar.text_input("Enter your admin ID")
+    admin_id = st.sidebar.text_input("Enter your admin ID",type="password")
+    st.sidebar.write("This is a private admin dashboard. Please enter your admin ID to access it.")
     if st.sidebar.button("Login"):
         admin(int(admin_id))
     else:
@@ -75,4 +77,5 @@ if mistral_api_key:
 else:
     st.error("Mistral API key not found. Please set the MISTRAL_API_KEY environment variable.")
 # Add a footer
-        
+st.markdown("---") 
+st.write("© abhishek srivastava")
